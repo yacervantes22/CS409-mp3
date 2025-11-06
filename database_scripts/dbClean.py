@@ -68,6 +68,7 @@ def main(argv):
 
     # Fetch a list of users
     users = getUsers(conn)
+    print(users)
 
     # Loop for as long as the database still returns users
     while len(users):
@@ -80,9 +81,11 @@ def main(argv):
 
         # Fetch a list of users
         users = getUsers(conn)
+        print(users)
 
     # Fetch a list of tasks
     tasks = getTasks(conn)
+    print(tasks)
 
     # Loop for as long as the database still returns tasks
     while len(tasks):

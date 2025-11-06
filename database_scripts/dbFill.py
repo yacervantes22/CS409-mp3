@@ -84,6 +84,7 @@ def main(argv):
         # Pick a random first name and last name
         x = randint(0,99)
         y = randint(0,99)
+        print(firstNames[x], lastNames[y])
         params = urllib.parse.urlencode({'name': firstNames[x] + " " + lastNames[y], 'email': firstNames[x] + "@" + lastNames[y] + ".com"})
 
         # POST the user
@@ -113,6 +114,7 @@ def main(argv):
         completed = (randint(0,10) > 5)
         deadline = (mktime(date.today().timetuple()) + randint(86400,864000)) * 1000
         description = "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English."
+        print(choice(taskNames))
         params = urllib.parse.urlencode({'name': choice(taskNames), 'deadline': deadline, 'assignedUserName': assignedUserName, 'assignedUser': assignedUserID, 'completed': str(completed).lower(), 'description': description})
 
         # POST the task
